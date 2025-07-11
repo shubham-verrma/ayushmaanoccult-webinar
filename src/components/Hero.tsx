@@ -10,12 +10,13 @@ const Hero = () => {
   });
 
   // Editable countdown target date - can be modified by admin
-  const [targetDate, setTargetDate] = useState('2024-02-25T23:59:59');
-  const [workshopDate, setWorkshopDate] = useState('15-17 February 2024');
-  const [workshopTime, setWorkshopTime] = useState('7:00 PM - 8:00 PM IST');
+  const [targetDate, setTargetDate] = useState('2024-07-16T23:59:59');
+  const [workshopDate, setWorkshopDate] = useState('14-16 July 2024');
+  const [workshopTime, setWorkshopTime] = useState('5:00 PM IST');
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
+    // Refresh timer every 15 minutes
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const target = new Date(targetDate).getTime();
@@ -29,7 +30,21 @@ const Hero = () => {
           seconds: Math.floor((difference % (1000 * 60)) / 1000)
         });
       }
-    }, 1000);
+    }, 15 * 60 * 1000); // Refresh every 15 minutes
+
+    // Initial update
+    const now = new Date().getTime();
+    const target = new Date(targetDate).getTime();
+    const difference = target - now;
+
+    if (difference > 0) {
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+      });
+    }
 
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -203,7 +218,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
               <Zap className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">20+ Years Expert</span>
+              <span className="text-lg font-semibold text-cream">20+ Years Expert Guidance</span>
             </div>
           </div>
           

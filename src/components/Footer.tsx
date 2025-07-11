@@ -86,18 +86,12 @@ const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-center group">
                 <div className="bg-gradient-to-r from-gold to-copper p-2 rounded-full mr-4 group-hover:scale-110 transition-transform">
-                  <Phone className="w-5 h-5 text-orange-900" />
-                </div>
-                <span className="text-cream/90 font-medium">+91 98765 43210</span>
-              </div>
-              <div className="flex items-center group">
-                <div className="bg-gradient-to-r from-gold to-copper p-2 rounded-full mr-4 group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5 text-orange-900" />
                 </div>
                 <span className="text-cream/90 font-medium">info@ayushmaanoccult.com</span>
               </div>
-              <div className="flex items-start group">
-                <div className="bg-gradient-to-r from-gold to-copper p-2 rounded-full mr-4 mt-1 group-hover:scale-110 transition-transform">
+              <div className="flex items-center group">
+                <div className="bg-gradient-to-r from-gold to-copper p-2 rounded-full mr-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-5 h-5 text-orange-900" />
                 </div>
                 <span className="text-cream/90 font-medium">New Delhi, India</span>

@@ -120,45 +120,6 @@ const WorkshopOverview = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-orange-900 to-amber-900 rounded-3xl shadow-2xl p-8 md:p-16 text-cream relative overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-gold/10 rounded-full -translate-x-16 -translate-y-16"></div>
-          <div className="absolute bottom-0 right-0 w-40 h-40 bg-copper/10 rounded-full translate-x-20 translate-y-20"></div>
-          
-          <div className="text-center mb-16 relative">
-            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-              3-Day Sacred Curriculum Journey
-            </h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-gold to-copper mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="space-y-12">
-            {curriculum.map((day, index) => (
-              <div key={index} className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="lg:w-1/3">
-                  <div className="bg-gradient-to-br from-gold to-copper text-orange-900 p-8 rounded-2xl text-center shadow-xl relative">
-                    <div className="text-6xl mb-4 opacity-20 absolute top-2 right-4">{day.symbol}</div>
-                    <h4 className="text-3xl font-serif font-bold mb-3">{day.day}</h4>
-                    <p className="text-lg font-medium">{day.title}</p>
-                  </div>
-                </div>
-                <div className="lg:w-2/3">
-                  <div className="bg-gradient-to-br from-cream/10 to-gold/10 rounded-2xl p-8 backdrop-blur-sm border border-gold/20">
-                    <ul className="space-y-4">
-                      {day.topics.map((topic, topicIndex) => (
-                        <li key={topicIndex} className="flex items-start">
-                          <Star className="w-5 h-5 text-gold mr-4 mt-1 flex-shrink-0" />
-                          <span className="text-cream/90 leading-relaxed">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="text-center mt-16">
           <a 
             href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"

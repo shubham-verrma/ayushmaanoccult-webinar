@@ -58,9 +58,9 @@ const CoachSection = () => {
                   
                   <div className="w-80 h-80 mx-auto mb-8 bg-gradient-to-br from-gold to-copper rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden">
                     <img 
-                      src="/src/assets/image.png" 
+                      src="https://images.pexels.com/photos/3771115/pexels-photo-3771115.jpeg?auto=compress&cs=tinysrgb&w=800" 
                       alt="Astro Shweeta Oberoi" 
-                      className="w-full h-full object-cover rounded-full"
+                      className="w-full h-full object-cover rounded-full object-top"
                     />
                     <div className="absolute inset-0 bg-gold rounded-full blur-2xl opacity-20 animate-pulse"></div>
                   </div>
