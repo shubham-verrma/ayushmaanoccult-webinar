@@ -108,25 +108,25 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center mb-16">
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
               <Calendar className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">3 Days Intensive</span>
+              <span className="text-base md:text-lg font-semibold text-cream">3 Days Intensive</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
               <Clock className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">1 Hour Daily</span>
+              <span className="text-base md:text-lg font-semibold text-cream">1 Hour Daily</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
               <Users className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">Zoom Class</span>
+              <span className="text-base md:text-lg font-semibold text-cream">Zoom Class</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
               <Gift className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">Free Resources</span>
+              <span className="text-base md:text-lg font-semibold text-cream">Free Resources</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
               <Zap className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">20+ Years Expert Guidance</span>
+              <span className="text-base md:text-lg font-semibold text-cream">20+ Years Expert</span>
             </div>
           </div>
           

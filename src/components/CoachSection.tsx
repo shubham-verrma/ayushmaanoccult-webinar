@@ -56,11 +56,11 @@ const CoachSection = () => {
                   <div className="absolute top-4 right-4 text-6xl text-gold/20">☽</div>
                   <div className="absolute bottom-4 left-4 text-4xl text-copper/20">✦</div>
                   
-                  <div className="w-80 h-80 mx-auto mb-8 bg-gradient-to-br from-gold to-copper rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden">
+                  <div className="w-64 h-64 md:w-80 md:h-80 mx-auto mb-8 bg-gradient-to-br from-gold to-copper rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden coach-image">
                     <img 
-                      src="/src/assets/shweeta-oberoi.png" 
+                      src="/src/assets/shweeta-creator.png" 
                       alt="Astro Shweeta Oberoi" 
-                      className="w-full h-full object-cover rounded-full"
+                      className="w-full h-full object-cover object-top rounded-full"
                     />
                     <div className="absolute inset-0 bg-gold rounded-full blur-2xl opacity-20 animate-pulse"></div>
                   </div>
@@ -99,7 +99,7 @@ const CoachSection = () => {
 
               <div>
                 <h3 className="text-3xl font-serif font-bold mb-8 text-gold">Sacred Achievements & Credentials</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4 achievements-grid">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="flex items-center bg-gradient-to-r from-cream/10 to-gold/10 backdrop-blur-sm rounded-xl p-5 hover:bg-cream/20 transition-all border border-gold/20">
                       <achievement.icon className="w-7 h-7 text-gold mr-4" />

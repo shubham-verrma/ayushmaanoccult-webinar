@@ -182,10 +182,21 @@
     line-height: 1.2;
   }
   
-  /* Stack elements vertically on mobile */
-  .grid {
+  /* Better mobile grid layouts */
+  .grid-cols-2 {
     grid-template-columns: 1fr;
-    gap: 1rem;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-cols-5 {
+    grid-template-columns: 1fr;
   }
   
   /* Adjust padding for mobile */
@@ -194,11 +205,72 @@
     padding-bottom: 3rem;
   }
   
+  /* Fix hero section mobile layout */
+  .hero-features {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .hero-features .flex {
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Fix coach section mobile layout */
+  .coach-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .coach-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  /* Fix testimonial video grid */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Fix curriculum section mobile */
+  .curriculum-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .curriculum-day {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .curriculum-content {
+    width: 100%;
+  }
+  
   /* Make buttons full width on small screens */
   @media (max-width: 480px) {
     .cta-button {
       width: 100%;
       text-align: center;
+    }
+    
+    /* Stack hero features vertically on very small screens */
+    .hero-features {
+      grid-template-columns: 1fr;
+    }
+    
+    /* Smaller coach image on very small screens */
+    .coach-image {
+      width: 200px;
+      height: 200px;
     }
   }
 }

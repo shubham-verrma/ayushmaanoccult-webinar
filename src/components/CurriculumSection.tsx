@@ -77,8 +77,8 @@ const CurriculumSection = () => {
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -translate-y-16 translate-x-16"></div>
               
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="lg:w-1/3">
+              <div className="flex flex-col lg:flex-row gap-8 items-start curriculum-item">
+                <div className="lg:w-1/3 curriculum-day">
                   <div className="bg-gradient-to-br from-gold to-copper text-orange-900 p-8 rounded-2xl text-center shadow-xl relative">
                     <day.icon className="w-16 h-16 mx-auto mb-4" />
                     <h3 className="text-3xl font-serif font-bold mb-3">{day.day}</h3>
@@ -86,7 +86,7 @@ const CurriculumSection = () => {
                   </div>
                 </div>
                 
-                <div className="lg:w-2/3">
+                <div className="lg:w-2/3 curriculum-content">
                   <p className="text-cream/90 text-lg leading-relaxed mb-8 font-medium">
                     {day.description}
                   </p>
