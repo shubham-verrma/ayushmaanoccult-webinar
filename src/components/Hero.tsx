@@ -1,7 +1,36 @@
-import React from 'react';
-import { Stars, Calendar, Clock, Users } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Stars, Calendar, Clock, Users, Gift, Zap } from 'lucide-react';
 
 const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  // Editable countdown target date - can be modified by admin
+  const [targetDate, setTargetDate] = useState('2024-02-20T23:59:59');
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const target = new Date(targetDate).getTime();
+      const difference = target - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-orange-900 via-amber-800 to-orange-800 text-cream overflow-hidden">
       {/* Mystical background patterns */}
@@ -78,32 +107,83 @@ const Hero = () => {
             <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-gold opacity-50"></div>
           </div>
           
-          <p className="text-xl md:text-2xl text-cream/90 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-200">
-            Unlock the ancient secrets of Vedic astrology and discover your cosmic blueprint in this transformative 3-day mystical journey
+          <p className="text-xl md:text-2xl text-cream/90 mb-8 max-w-4xl mx-auto leading-relaxed animate-slide-up delay-200">
+            The magical thing about Astrology is you are completely unique, No chart will ever be replicated again. 
+            Humari 3-day astrology workshop ko join karein, and kundli banana seekhein.
           </p>
+
+          {/* Date and Time Placeholder */}
+          <div className="bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gold/30 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-serif font-bold text-gold mb-4">Workshop Schedule</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-lg">
+              <div className="flex items-center justify-center">
+                <Calendar className="w-6 h-6 mr-3 text-gold" />
+                <span className="text-cream font-semibold">15-17 February 2024</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Clock className="w-6 h-6 mr-3 text-gold" />
+                <span className="text-cream font-semibold">7:00 PM - 8:00 PM IST</span>
+              </div>
+            </div>
+            <div className="mt-4 text-center">
+              <span className="bg-gradient-to-r from-gold to-copper text-orange-900 px-6 py-2 rounded-full font-bold text-lg">
+                Online Session on Zoom
+              </span>
+            </div>
+          </div>
+
+          {/* Countdown Timer */}
+          <div className="bg-gradient-to-r from-orange-900/80 to-amber-900/80 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-gold/30 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-serif font-bold text-gold mb-6">Limited Time Offer Ends In:</h3>
+            <div className="grid grid-cols-4 gap-4">
+              {Object.entries(timeLeft).map(([unit, value]) => (
+                <div key={unit} className="bg-gradient-to-br from-gold to-copper text-orange-900 rounded-xl p-4 text-center">
+                  <div className="text-3xl font-bold">{value}</div>
+                  <div className="text-sm font-semibold uppercase">{unit}</div>
+                </div>
+              ))}
+            </div>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-8 py-4 border border-gold/30">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center mb-16">
+            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
               <Calendar className="w-6 h-6 mr-3 text-gold" />
               <span className="text-lg font-semibold text-cream">3 Days Intensive</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-8 py-4 border border-gold/30">
+            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
               <Clock className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">2 Hours Daily</span>
+              <span className="text-lg font-semibold text-cream">1 Hour Daily</span>
             </div>
-            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-8 py-4 border border-gold/30">
+            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
               <Users className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-lg font-semibold text-cream">Expert Guidance</span>
+              <span className="text-lg font-semibold text-cream">Zoom Class</span>
+            </div>
+            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+              <Gift className="w-6 h-6 mr-3 text-gold" />
+              <span className="text-lg font-semibold text-cream">Free Resources</span>
+            </div>
+            <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
+              <Zap className="w-6 h-6 mr-3 text-gold" />
+              <span className="text-lg font-semibold text-cream">20+ Years Expert</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50 animate-glow">
-              Secure Your Mystical Journey - Limited Seats!
-            </button>
-            <button className="border-2 border-gold text-gold px-10 py-5 rounded-full text-xl font-bold hover:bg-gold hover:text-orange-900 transition-all duration-300 backdrop-blur-sm">
-              Discover More
-            </button>
+            <a 
+              href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
+              className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50 animate-glow"
+            >
+              Register Now - Limited Seats Only!
+            </a>
+          </div>
+
+          {/* Pricing */}
+          <div className="mt-8 text-center">
+            <div className="inline-flex items-center bg-gradient-to-r from-green-600/20 to-green-700/20 backdrop-blur-sm rounded-2xl px-8 py-4 border border-green-500/30">
+              <span className="text-3xl font-bold text-green-400 mr-4">₹99</span>
+              <span className="text-xl text-gray-400 line-through mr-4">₹198</span>
+              <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">50% OFF</span>
+            </div>
           </div>
         </div>
       </div>

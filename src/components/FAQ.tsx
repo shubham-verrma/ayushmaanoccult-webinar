@@ -107,9 +107,12 @@ const FAQ = () => {
             <p className="text-xl text-copper mb-8 font-medium">
               Still have mystical questions? Our spiritual guides are here to help!
             </p>
-            <button className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50">
-              Connect with Our Sacred Guides
-            </button>
+            <a 
+              href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
+              className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50"
+            >
+              Register Now
+            </a>
           </div>
         </div>
       </div>

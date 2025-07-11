@@ -195,12 +195,12 @@ const ScheduleSection = () => {
                 Early mystic pricing available until {new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString()}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50">
-                  Secure Your Sacred Spot - ₹2,999
-                </button>
-                <button className="border-2 border-gold text-gold px-10 py-5 rounded-full text-xl font-bold hover:bg-gold hover:text-orange-900 transition-all duration-300 backdrop-blur-sm">
-                  Sacred Payment Plans Available
-                </button>
+                <a 
+                  href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
+                  className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50"
+                >
+                  Register Now - ₹99
+                </a>
               </div>
             </div>
           </div>

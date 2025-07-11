@@ -1,37 +1,37 @@
 import React from 'react';
-import { BookOpen, Eye, Star, Target, Award, Brain } from 'lucide-react';
+import { BookOpen, Eye, Star, Target, Award, Brain, Gift, Video, Users, MessageCircle, Phone, Zap } from 'lucide-react';
 
 const WorkshopOverview = () => {
   const features = [
     {
-      icon: BookOpen,
-      title: "Sacred Foundations",
-      description: "Learn the fundamental principles of Vedic astrology and ancient chart interpretation wisdom"
+      icon: Gift,
+      title: "Free Resources Provided",
+      description: "Aapko milenge high-quality free study materials jaise e-books aur charts, jo aapki astrology journey ko easy banayenge."
     },
     {
-      icon: Eye,
-      title: "Mystical Chart Reading",
-      description: "Master the sacred art of reading birth charts and understanding celestial planetary positions"
-    },
-    {
-      icon: Star,
-      title: "Planetary Influences",
-      description: "Discover how cosmic forces and planetary energies affect personality traits and life events"
+      icon: Video,
+      title: "Recordings with Lifetime Access",
+      description: "Har session ki recordings available hongi lifetime ke liye, taaki aap kabhi bhi review kar sako without missing anything."
     },
     {
       icon: Target,
-      title: "Practical Divination",
-      description: "Apply your mystical knowledge to real-life situations and spiritual personal development"
+      title: "Priority Access to Enroll for Advanced Course",
+      description: "Workshop complete karne par, aapko priority milegi advanced Vedic Astrology course mein enroll hone ke liye, before others."
     },
     {
-      icon: Award,
-      title: "Sacred Certification",
-      description: "Receive a blessed completion certificate from Ayushmaan Occult Sciences"
+      icon: MessageCircle,
+      title: "Complementary Access to WhatsApp Community",
+      description: "Join our exclusive WhatsApp group free, jahaan remedies, tips aur discussions regularly share kiye jaate hain by experts."
     },
     {
-      icon: Brain,
-      title: "Ancient Wisdom",
-      description: "Connect with thousands of years of sacred Vedic astronomical and mystical knowledge"
+      icon: Phone,
+      title: "Lifelong Access to Astrologer Shweeta Oberoi",
+      description: "Mujhse direct connect raho lifelong, for personal guidance, queries aur astrology consultations anytime."
+    },
+    {
+      icon: Zap,
+      title: "3 Days Interactive Vedic Astrology Classes",
+      description: "Teen dinon mein seekho Vedic Astrology ke fundamentals live interactive classes mein, jahaan aap unmute kar ke questions pooch sakte ho, unlike other coaches."
     }
   ];
 
@@ -95,11 +95,10 @@ const WorkshopOverview = () => {
             </div>
           </div>
           <h2 className="text-5xl md:text-6xl font-serif font-bold text-orange-900 mb-8">
-            Transform Your Cosmic Understanding
+            Unlock the Mysteries of the Stars with Shweeta Oberoi
           </h2>
           <p className="text-xl text-copper max-w-4xl mx-auto leading-relaxed">
-            This comprehensive mystical workshop will guide you from novice to confident chart reader, 
-            equipped with ancient wisdom to understand life's sacred cosmic patterns and divine purpose.
+            Namaste! Join my interactive 3-day workshop on Vedic Astrology basics, jahaan aap stars ki power ko samajh kar apni life improve kar sakte ho. Yeh workshop specially designed hai beginners ke liye, with real-time interaction.
           </p>
         </div>
 
@@ -161,9 +160,12 @@ const WorkshopOverview = () => {
         </div>
 
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-gold to-copper text-orange-900 px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50">
-            Begin Your Mystical Journey Today
-          </button>
+          <a 
+            href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
+            className="bg-gradient-to-r from-gold to-copper text-orange-900 px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </section>
