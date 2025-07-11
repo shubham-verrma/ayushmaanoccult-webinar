@@ -10,7 +10,10 @@ const Hero = () => {
   });
 
   // Editable countdown target date - can be modified by admin
-  const [targetDate, setTargetDate] = useState('2024-02-20T23:59:59');
+  const [targetDate, setTargetDate] = useState('2024-02-25T23:59:59');
+  const [workshopDate, setWorkshopDate] = useState('15-17 February 2024');
+  const [workshopTime, setWorkshopTime] = useState('7:00 PM - 8:00 PM IST');
+  const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -114,15 +117,51 @@ const Hero = () => {
 
           {/* Date and Time Placeholder */}
           <div className="bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gold/30 max-w-2xl mx-auto">
+            {isEditing && (
+              <div className="mb-4 space-y-4">
+                <input
+                  type="text"
+                  value={workshopDate}
+                  onChange={(e) => setWorkshopDate(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
+                  placeholder="Workshop Date"
+                />
+                <input
+                  type="text"
+                  value={workshopTime}
+                  onChange={(e) => setWorkshopTime(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
+                  placeholder="Workshop Time"
+                />
+                <input
+                  type="datetime-local"
+                  value={targetDate.slice(0, -3)}
+                  onChange={(e) => setTargetDate(e.target.value + ':59')}
+                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
+                />
+                <button
+                  onClick={() => setIsEditing(false)}
+                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                >
+                  Save Changes
+                </button>
+              </div>
+            )}
             <h3 className="text-2xl font-serif font-bold text-gold mb-4">Workshop Schedule</h3>
+            <button
+              onClick={() => setIsEditing(!isEditing)}
+              className="absolute top-4 right-4 text-gold hover:text-copper transition-colors text-sm"
+            >
+              {isEditing ? 'Cancel' : 'Edit'}
+            </button>
             <div className="grid md:grid-cols-2 gap-4 text-lg">
               <div className="flex items-center justify-center">
                 <Calendar className="w-6 h-6 mr-3 text-gold" />
-                <span className="text-cream font-semibold">15-17 February 2024</span>
+                <span className="text-cream font-semibold">{workshopDate}</span>
               </div>
               <div className="flex items-center justify-center">
                 <Clock className="w-6 h-6 mr-3 text-gold" />
-                <span className="text-cream font-semibold">7:00 PM - 8:00 PM IST</span>
+                <span className="text-cream font-semibold">{workshopTime}</span>
               </div>
             </div>
             <div className="mt-4 text-center">

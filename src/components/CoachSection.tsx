@@ -3,12 +3,12 @@ import { Award, BookOpen, Users, Star, Calendar, Trophy } from 'lucide-react';
 
 const CoachSection = () => {
   const achievements = [
-    { icon: Calendar, text: "15+ Years Sacred Practice" },
+    { icon: Calendar, text: "20+ Years Sacred Practice" },
     { icon: Users, text: "5000+ Souls Guided" },
     { icon: Award, text: "Certified Vedic Master" },
-    { icon: BookOpen, text: "Published Mystic Author" },
-    { icon: Trophy, text: "International Recognition" },
-    { icon: Star, text: "98% Transformation Rate" }
+    { icon: BookOpen, text: "University Acharya Degree" },
+    { icon: Trophy, text: "Award-Winning Expert" },
+    { icon: Star, text: "Shree Vidhya Sadhak" }
   ];
 
   return (
@@ -41,7 +41,7 @@ const CoachSection = () => {
               </div>
             </div>
             <h2 className="text-5xl md:text-6xl font-serif font-bold mb-8">
-              Meet Your Sacred Guide
+              About the Creator
             </h2>
             <p className="text-xl text-copper max-w-4xl mx-auto leading-relaxed">
               Learn from a mystical master who has dedicated her life to understanding the cosmic sciences and ancient wisdom traditions
@@ -51,21 +51,23 @@ const CoachSection = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="bg-gradient-to-br from-gold to-copper rounded-3xl p-2 shadow-2xl">
-                <div className="bg-gradient-to-br from-orange-800 to-amber-800 rounded-2xl p-12 h-full relative overflow-hidden">
+                <div className="bg-gradient-to-br from-orange-800 to-amber-800 rounded-2xl p-8 h-full relative overflow-hidden">
                   {/* Decorative mystical symbols */}
                   <div className="absolute top-4 right-4 text-6xl text-gold/20">☽</div>
                   <div className="absolute bottom-4 left-4 text-4xl text-copper/20">✦</div>
                   
-                  <div className="w-56 h-56 mx-auto mb-8 bg-gradient-to-br from-gold to-copper rounded-full flex items-center justify-center shadow-2xl relative">
-                    <div className="w-52 h-52 bg-gradient-to-br from-orange-800 to-amber-800 rounded-full flex items-center justify-center border-4 border-gold/30">
-                      <span className="text-7xl font-serif font-bold text-gold">SO</span>
-                    </div>
+                  <div className="w-80 h-80 mx-auto mb-8 bg-gradient-to-br from-gold to-copper rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden">
+                    <img 
+                      src="/src/assets/image.png" 
+                      alt="Astro Shweeta Oberoi" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                     <div className="absolute inset-0 bg-gold rounded-full blur-2xl opacity-20 animate-pulse"></div>
                   </div>
                   
                   <div className="text-center">
-                    <h3 className="text-4xl font-serif font-bold mb-3 text-gold">Shweeta Oberoi</h3>
-                    <p className="text-copper text-xl mb-6 font-medium">Master Vedic Astrologer & Mystic</p>
+                    <h3 className="text-4xl font-serif font-bold mb-3 text-gold">Astro Shweeta Oberoi</h3>
+                    <p className="text-copper text-xl mb-6 font-medium">An award-winning expert in astrology, numerology, vastu shastra & palmistry</p>
                     <div className="flex justify-center mb-6">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-7 h-7 text-gold fill-current mx-1" />
@@ -78,17 +80,20 @@ const CoachSection = () => {
 
             <div className="space-y-10">
               <div>
-                <h3 className="text-3xl font-serif font-bold mb-6 text-gold">About the Mystic</h3>
+                <h3 className="text-3xl font-serif font-bold mb-6 text-gold">About the Expert</h3>
                 <p className="text-lg text-cream/90 mb-6 leading-relaxed">
-                  Shweeta Oberoi is a renowned Vedic astrologer and mystical practitioner with over 15 years of sacred experience in guiding 
-                  souls through the profound wisdom of ancient astronomical sciences. Her deep understanding of 
-                  Kundali analysis and cosmic energies has helped thousands discover their divine purpose and navigate 
-                  life's mystical journey with clarity and spiritual confidence.
+                  Shweeta Oberoi is a renowned Astrology Instructor in India and has experience of 20+ years in astrology. 
+                  From a very early age, she began to understand and study how different elements in our surroundings can 
+                  affect human life and nature.
+                </p>
+                <p className="text-lg text-cream/90 mb-6 leading-relaxed">
+                  Till now, she has taught 5000+ people astrology. Over the years, she has continually studied and improved 
+                  her knowledge of astrology. She has taken university courses in Astrology, Alankar Shastra, and attained 
+                  Acharya Degree. She also has vast knowledge of Vastu Shastra.
                 </p>
                 <p className="text-lg text-cream/90 mb-8 leading-relaxed">
-                  With a unique gift for translating complex astrological and mystical concepts into practical spiritual guidance, 
-                  Shweeta has become a trusted oracle in the field of Vedic astrology. Her sacred teachings combine 
-                  ancient wisdom with modern understanding, making timeless knowledge accessible to contemporary seekers of truth.
+                  She is a certified Shree Vidhya Sadhak and has done much Sadhna of Maa Lalitamba. She believes people can 
+                  make a career out of astrology to grow themselves and others around them.
                 </p>
               </div>
 

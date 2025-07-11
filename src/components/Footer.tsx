@@ -42,7 +42,7 @@ const Footer = () => {
               <a href="#" className="bg-gradient-to-r from-gold/20 to-copper/20 p-4 rounded-full hover:bg-gold/30 transition-colors border border-gold/30 hover:scale-110 transform duration-300">
                 <Facebook className="w-6 h-6 text-gold" />
               </a>
-              <a href="#" className="bg-gradient-to-r from-gold/20 to-copper/20 p-4 rounded-full hover:bg-gold/30 transition-colors border border-gold/30 hover:scale-110 transform duration-300">
+              <a href="https://www.instagram.com/shweetaoberoiofficial/" className="bg-gradient-to-r from-gold/20 to-copper/20 p-4 rounded-full hover:bg-gold/30 transition-colors border border-gold/30 hover:scale-110 transform duration-300">
                 <Instagram className="w-6 h-6 text-gold" />
               </a>
               <a href="#" className="bg-gradient-to-r from-gold/20 to-copper/20 p-4 rounded-full hover:bg-gold/30 transition-colors border border-gold/30 hover:scale-110 transform duration-300">
