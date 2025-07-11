@@ -2,52 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Stars, Calendar, Clock, Users, Gift, Zap } from 'lucide-react';
 
 const Hero = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  // Editable countdown target date - can be modified by admin
-  const [targetDate, setTargetDate] = useState('2024-07-16T23:59:59');
-  const [workshopDate, setWorkshopDate] = useState('14-16 July 2024');
-  const [workshopTime, setWorkshopTime] = useState('5:00 PM IST');
-  const [isEditing, setIsEditing] = useState(false);
-
-  useEffect(() => {
-    // Refresh timer every 15 minutes
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const target = new Date(targetDate).getTime();
-      const difference = target - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
-        });
-      }
-    }, 15 * 60 * 1000); // Refresh every 15 minutes
-
-    // Initial update
-    const now = new Date().getTime();
-    const target = new Date(targetDate).getTime();
-    const difference = target - now;
-
-    if (difference > 0) {
-      setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000)
-      });
-    }
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
+  // Fixed workshop details - not editable for viewers
+  const workshopDate = '14-16 July 2024';
+  const workshopTime = '5:00 PM IST';
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-orange-900 via-amber-800 to-orange-800 text-cream overflow-hidden">
@@ -130,45 +87,9 @@ const Hero = () => {
             Humari 3-day astrology workshop ko join karein, and kundli banana seekhein.
           </p>
 
-          {/* Date and Time Placeholder */}
+          {/* Workshop Schedule - Fixed, not editable */}
           <div className="bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gold/30 max-w-2xl mx-auto">
-            {isEditing && (
-              <div className="mb-4 space-y-4">
-                <input
-                  type="text"
-                  value={workshopDate}
-                  onChange={(e) => setWorkshopDate(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
-                  placeholder="Workshop Date"
-                />
-                <input
-                  type="text"
-                  value={workshopTime}
-                  onChange={(e) => setWorkshopTime(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
-                  placeholder="Workshop Time"
-                />
-                <input
-                  type="datetime-local"
-                  value={targetDate.slice(0, -3)}
-                  onChange={(e) => setTargetDate(e.target.value + ':59')}
-                  className="w-full px-4 py-2 rounded-lg border border-gold/30 bg-cream text-orange-900 font-semibold"
-                />
-                <button
-                  onClick={() => setIsEditing(false)}
-                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  Save Changes
-                </button>
-              </div>
-            )}
             <h3 className="text-2xl font-serif font-bold text-gold mb-4">Workshop Schedule</h3>
-            <button
-              onClick={() => setIsEditing(!isEditing)}
-              className="absolute top-4 right-4 text-gold hover:text-copper transition-colors text-sm"
-            >
-              {isEditing ? 'Cancel' : 'Edit'}
-            </button>
             <div className="grid md:grid-cols-2 gap-4 text-lg">
               <div className="flex items-center justify-center">
                 <Calendar className="w-6 h-6 mr-3 text-gold" />
@@ -186,19 +107,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Countdown Timer */}
-          <div className="bg-gradient-to-r from-orange-900/80 to-amber-900/80 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-gold/30 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold text-gold mb-6">Limited Time Offer Ends In:</h3>
-            <div className="grid grid-cols-4 gap-4">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="bg-gradient-to-br from-gold to-copper text-orange-900 rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold">{value}</div>
-                  <div className="text-sm font-semibold uppercase">{unit}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center mb-16">
             <div className="flex items-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-6 py-4 border border-gold/30">
               <Calendar className="w-6 h-6 mr-3 text-gold" />
