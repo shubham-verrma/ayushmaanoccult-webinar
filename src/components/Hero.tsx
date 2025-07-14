@@ -3,8 +3,8 @@ import { Stars, Calendar, Clock, Users, Gift, Zap } from 'lucide-react';
 
 const Hero = () => {
   // Fixed workshop details - not editable for viewers
-  const workshopDate = '14-16 July 2024';
-  const workshopTime = '5:00 PM IST';
+  const workshopDate = '25-27 July 2025';
+  const workshopTime = '6:00 PM IST';
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-orange-900 via-amber-800 to-orange-800 text-cream overflow-hidden">
@@ -108,32 +108,32 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center mb-16">
-            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-3 border border-gold/30 text-center">
               <Calendar className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-base md:text-lg font-semibold text-cream">3 Days Intensive</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-cream">3 Days Intensive</span>
             </div>
-            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-3 border border-gold/30 text-center">
               <Clock className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-base md:text-lg font-semibold text-cream">1 Hour Daily</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-cream">1 Hour Daily</span>
             </div>
-            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-3 border border-gold/30 text-center">
               <Users className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-base md:text-lg font-semibold text-cream">Zoom Class</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-cream">Zoom Class</span>
             </div>
-            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-3 border border-gold/30 text-center">
               <Gift className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-base md:text-lg font-semibold text-cream">Free Resources</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-cream">Free Resources</span>
             </div>
-            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-4 py-3 border border-gold/30 text-center">
+            <div className="flex items-center justify-center bg-gradient-to-r from-gold/20 to-copper/20 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-3 border border-gold/30 text-center">
               <Zap className="w-6 h-6 mr-3 text-gold" />
-              <span className="text-base md:text-lg font-semibold text-cream">20+ Years Expert</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-cream">20+ Years Expert</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
-              className="bg-gradient-to-r from-gold to-copper text-orange-900 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50 animate-glow"
+              href="https://ayushmaanoccult.exlyapp.com/checkout/e0947fd7-6c01-447c-9fb1-4b6abcbff549"
+              className="bg-gradient-to-r from-gold to-copper text-orange-900 px-6 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 border-2 border-gold/50 animate-glow text-center"
             >
               Register Now - Limited Seats Only!
             </a>

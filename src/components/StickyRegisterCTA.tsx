@@ -47,7 +47,7 @@ const StickyRegisterCTA = () => {
           
           <div className="flex items-center space-x-3">
             <a 
-              href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
+              href="https://ayushmaanoccult.exlyapp.com/checkout/e0947fd7-6c01-447c-9fb1-4b6abcbff549"
               className="bg-gradient-to-r from-gold to-copper text-orange-900 px-4 sm:px-6 py-3 rounded-full text-base sm:text-lg font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 border border-gold/30 whitespace-nowrap"
             >
               Register Now

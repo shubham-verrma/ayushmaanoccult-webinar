@@ -39,8 +39,8 @@ const Header = () => {
         </nav>
         
         <a 
-          href="https://ayushmaanoccult.exlyapp.com/checkout/03a9e492-280c-498d-97eb-9cde79d5a1f2?init_booking=True"
-          className="bg-gradient-to-r from-gold to-copper text-orange-900 px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-gold/25 hover:scale-105 transition-all duration-300 border border-gold/30"
+          href="https://ayushmaanoccult.exlyapp.com/checkout/e0947fd7-6c01-447c-9fb1-4b6abcbff549"
+          className="bg-gradient-to-r from-gold to-copper text-orange-900 px-4 sm:px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-gold/25 hover:scale-105 transition-all duration-300 border border-gold/30 text-sm sm:text-base"
         >
           Register Now
         </a>
